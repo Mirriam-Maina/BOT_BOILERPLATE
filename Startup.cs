@@ -44,8 +44,8 @@ namespace Microsoft.BotBuilderSamples
 
         public  void ConfigureState(IServiceCollection services)
         {
-            var storageAccount = "DefaultEndpointsProtocol=https;AccountName=mirrbot;AccountKey=CpfL0zNkEZTqNHJFmqe5D+VvvVEbNokosNnQywLQhprCpnDLLFqRa7V9lLQb+nrM9mhTKi64IH3uHP0r11XcjQ==;EndpointSuffix=core.windows.net";
-            var storageContainer = "statecontainer";
+            var storageAccount = "YourConnectionstringforthestorageAccount";
+            var storageContainer = "yourContainerName";
 
             services.AddSingleton<IStorage>(new AzureBlobStorage(storageAccount, storageContainer));
             services.AddSingleton<UserState>();
